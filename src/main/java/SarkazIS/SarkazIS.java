@@ -3,12 +3,8 @@ package SarkazIS;
 import basemod.*;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
-import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
@@ -22,20 +18,7 @@ import java.util.*;
 public class SarkazIS implements EditRelicsSubscriber, EditStringsSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PostDungeonInitializeSubscriber, AddCustomModeModsSubscriber, OnStartBattleSubscriber, OnPlayerLoseBlockSubscriber, RelicGetSubscriber {
 
     private static final Logger logger = LogManager.getLogger(SarkazIS.class.getName());
-    public static Texture ideaImg;
-    public static Texture refreshImg;
-    public static int ideaCount;
-    public static Hitbox ideaHb;
-    public static String[] TEXT;
-    public static int prob;
-    public static boolean firstEvent;
-    public static boolean isLastOpRefresh;
-    public static String MOD_ID = "encountermod";
-    public static Random refreshRng;
-    public static Random myMapRng;
-    private static SpireConfig config;
-    public static boolean challengeSpines;
-    public static boolean quilonBoss;
+    public static String MOD_ID = "SarkazIS";
 
     public boolean isDemo = false;
 
@@ -96,11 +79,11 @@ public class SarkazIS implements EditRelicsSubscriber, EditStringsSubscriber, Po
     @Override
     public void receiveEditStrings() {
         String lang = getLang();
-        String relicStrings = Gdx.files.internal("resources/encountermod/strings/" + lang + "/relics.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String relicStrings = Gdx.files.internal("SarkazIS/strings/" + lang + "/relics.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-        String powerStrings = Gdx.files.internal("resources/encountermod/strings/" + lang + "/powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String powerStrings = Gdx.files.internal("SarkazIS/strings/" + lang + "/powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-        String monsterStrings = Gdx.files.internal("resources/encountermod/strings/" + lang + "/monsters.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String monsterStrings = Gdx.files.internal("SarkazIS/strings/" + lang + "/monsters.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
     }
 
