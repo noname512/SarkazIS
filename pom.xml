@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>encountermod</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <modthespire.path>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1605060445/ModTheSpire.jar</modthespire.path>
+        <baseMod.path>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1605833019/BaseMod.jar</baseMod.path>
+        <desktop-1.0.path>C:/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/desktop-1.0.jar</desktop-1.0.path>
+        <StSLib.path>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1609158507/StSLib.jar</StSLib.path>
+        <encountermod.path>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/3518376708/encountermod.jar</encountermod.path>
+        <TreeHoleMod.path>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/3537874513/TreeHoleMod-0.7.jar</TreeHoleMod.path>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>modthespire</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${modthespire.path}</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>baseMod</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${baseMod.path}</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>desktop-1.0</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${desktop-1.0.path}</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>StSLib</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${StSLib.path}</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>encountermod</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${encountermod.path}</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>TreeHoleMod</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${TreeHoleMod.path}</systemPath>
+        </dependency>
+    </dependencies>
+    <build>
+    <finalName>SarkazIS</finalName>
+    </build>
+</project>

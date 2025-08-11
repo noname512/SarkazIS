@@ -1,0 +1,10 @@
+{
+    "modid": "SarkazISMod",
+    "name": "SarkazIS(萨卡兹肉鸽)",
+    "author_list": ["_noname512", "absi2011", "moranzc"],
+    "description": "",
+    "version": "0.1",
+    "sts_version": "12-22-2020",
+    "mts_version": "3.8.0",
+    "dependencies": ["basemod", "stslib", "encountermod", "TreeHoleMod"]
+}

@@ -1,2 +1,2 @@
-# SarkazISMod
+# SarkazIS
 Sarkaz's Furnaceside Fables
