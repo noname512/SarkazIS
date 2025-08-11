@@ -19,9 +19,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @SpireInitializer
-public class SarkazISMod implements EditRelicsSubscriber, EditStringsSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PostDungeonInitializeSubscriber, AddCustomModeModsSubscriber, OnStartBattleSubscriber, OnPlayerLoseBlockSubscriber, RelicGetSubscriber {
+public class SarkazIS implements EditRelicsSubscriber, EditStringsSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PostDungeonInitializeSubscriber, AddCustomModeModsSubscriber, OnStartBattleSubscriber, OnPlayerLoseBlockSubscriber, RelicGetSubscriber {
 
-    private static final Logger logger = LogManager.getLogger(SarkazISMod.class.getName());
+    private static final Logger logger = LogManager.getLogger(SarkazIS.class.getName());
     public static Texture ideaImg;
     public static Texture refreshImg;
     public static int ideaCount;
@@ -39,13 +39,13 @@ public class SarkazISMod implements EditRelicsSubscriber, EditStringsSubscriber,
 
     public boolean isDemo = false;
 
-    public SarkazISMod() {
+    public SarkazIS() {
         BaseMod.subscribe(this);
     }
 
     @SuppressWarnings("unused")
     public static void initialize() {
-        new SarkazISMod();
+        new SarkazIS();
     }
 
     @Override
