@@ -1,5 +1,6 @@
 package SarkazIS;
 
+import SarkazIS.TreeHole.TreeHoleSarkaz;
 import basemod.*;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -10,6 +11,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import TreeHole.mod.TreeHoleBase;
+import TreeHole.mod.TreeHoleMod;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -44,7 +47,9 @@ public class SarkazIS implements EditRelicsSubscriber, EditStringsSubscriber, Po
     }
 
     @Override
-    public void receivePostDungeonInitialize() {}
+    public void receivePostDungeonInitialize() {
+        TreeHoleMod.registerTreeHole("samirg:TheSami", (TreeHoleBase)new TreeHoleSarkaz());
+    }
 
     @Override
     public void receiveCustomModeMods(List<CustomMod> modList) {
@@ -79,11 +84,11 @@ public class SarkazIS implements EditRelicsSubscriber, EditStringsSubscriber, Po
     @Override
     public void receiveEditStrings() {
         String lang = getLang();
-        String relicStrings = Gdx.files.internal("SarkazIS/strings/" + lang + "/relics.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String relicStrings = Gdx.files.internal("resources/SarkazIS/strings/" + lang + "/relics.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-        String powerStrings = Gdx.files.internal("SarkazIS/strings/" + lang + "/powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String powerStrings = Gdx.files.internal("resources/SarkazIS/strings/" + lang + "/powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-        String monsterStrings = Gdx.files.internal("SarkazIS/strings/" + lang + "/monsters.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String monsterStrings = Gdx.files.internal("resources/SarkazIS/strings/" + lang + "/monsters.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
     }
 
